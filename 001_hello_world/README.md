@@ -1,9 +1,4 @@
-Compile the code with
-
-`rustc main.rs`
-
-Run the resulting program
-
+Compile the code with `rustc main.rs` and run the resulting program
 ```
 main.exe
 > Hello, World!
