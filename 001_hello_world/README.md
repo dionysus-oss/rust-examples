@@ -1,7 +1,7 @@
 Compile the code with `rustc main.rs` and run the resulting program
 ```
-main.exe
-> Hello, World!
+$ main.exe
+Hello, World!
 ```
 
 Try breaking the program by renaming the main function to `main2` and attempt to build again.
