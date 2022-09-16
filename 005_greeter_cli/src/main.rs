@@ -10,7 +10,7 @@ fn main() {
     let who = std::env::args().nth(1).expect("missing 'who' argument in position 1");
     let lang = std::env::args().nth(2).expect("missing 'lang' argument in position 2");
 
-    match lang.as_ref() {
+    match lang.as_str() {
         "en" => {
             println!("Hello, {}!", who);
         }
