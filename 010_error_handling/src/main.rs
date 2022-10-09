@@ -55,7 +55,7 @@ fn maybe_get_name_from_json_string(json: &str) -> Option<String> {
     match parsed {
         Ok(r) => {
             match &r["name"] {
-                Value::String(n) => Option::Some(n.clone()),
+                Value::String(n) => Some(n.clone()),
                 _ => None
             }
         },
