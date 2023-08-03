@@ -1,0 +1,12 @@
+[workspace]
+members = [
+    "005_greeter_cli",
+    "006_calculator_cli",
+    "007_pancake_sort",
+    "008_averages",
+    "009_unit_testing",
+    "010_error_handling",
+    "011_bitwise",
+    "012_parser",
+    "013_nom_parser",
+]
