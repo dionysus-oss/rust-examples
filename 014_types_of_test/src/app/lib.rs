@@ -1,3 +1,5 @@
+#![cfg_attr(all(test, feature = "benches"), feature(test))]
+
 pub fn count_substrings<T>(find: String, find_in: T) -> u32
 where
     T: Iterator<Item = String>,
@@ -32,5 +34,25 @@ mod tests {
     fn test_count_substrings() {
         let count = count_substrings("of".to_string(), ["professor".to_string()].into_iter());
         assert_eq!(count, 1);
+    }
+}
+
+#[cfg(all(test, feature = "benches"))]
+mod benches {
+    use super::count_substrings;
+
+    extern crate test;
+    use test::Bencher;
+
+    #[bench]
+    fn bench_count_substrings(b: &mut Bencher) {
+        b.iter(|| {
+            count_substrings(
+                "of".to_string(),
+                ["professor", "cat", "hedgehog", "car", "van", "sofa"]
+                    .map(|x| x.to_string())
+                    .into_iter(),
+            );
+        })
     }
 }

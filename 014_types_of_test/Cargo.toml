@@ -8,3 +8,7 @@ name = "app"
 path = "src/app/lib.rs"
 
 [dependencies]
+
+[features]
+# Requires nightly, to run `cargo bench --features benches`
+benches = []
