@@ -24,3 +24,14 @@ fn main() {
 
     println!("Count is {}", num);
 }
+
+#[cfg(test)]
+mod tests {
+    use crate::count_substrings;
+
+    #[test]
+    fn test_count_substrings() {
+        let count = count_substrings("of".to_string(), ["professor".to_string()].into_iter());
+        assert_eq!(count, 1);
+    }
+}
