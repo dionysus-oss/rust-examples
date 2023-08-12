@@ -9,4 +9,5 @@ members = [
     "011_bitwise",
     "012_parser",
     "013_nom_parser",
+    "014_types_of_test",
 ]
